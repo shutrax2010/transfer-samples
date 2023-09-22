@@ -1,0 +1,134 @@
+<!--
+  http://ec2-43-206-240-86.ap-northeast-1.compute.amazonaws.com/
+-->
+<html>
+    <head>
+        <title>Token Test</title>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+  
+    <body>
+        <section class="top">
+            <h1>Token Example 4</h1>
+
+            <div id="loading" class="loading">
+                <span data-text="L">L</span>
+                <span data-text="O">O</span>
+                <span data-text="A">A</span>
+                <span data-text="D">D</span>
+                <span data-text="I">I</span>
+                <span data-text="N">N</span>
+                <span data-text="G">G</span>
+            </div>
+
+        </section>
+        <section class="middle">
+
+            <div class="middle-left">
+                <form id="js-form">
+                    <div class="send-container form-item">
+                        <h2>Send Tokens</h2>
+<!--
+                        <div class="send-type">
+                            <label class="label-radio">
+                                <input id="xrp-rbtn" type="radio" name="type" checked />
+                                XRP
+                            </label>
+                            <label class="label-radio">
+                                <input id="btr-rbtn" type="radio" name="type"/>
+                                btrax coin
+                            </label>
+                        </div>
+-->
+                        <label for="from">From</label>
+                        <select id="from">
+                            <option value="user1" selected>Ptah Onouphrios</option>
+                            <option value="user2">Phaedra Simon</option>
+                            <option value="user3">Arachne Odysseus</option>
+                        </select>
+                        <label for="to">To</label>
+                        <select id="to">
+                            <option value="user1">Ptah Onouphrios</option>
+                            <option value="user2" selected>Phaedra Simon</option>
+                            <option value="user3">Arachne Odysseus</option>
+                        </select>
+                    </div>
+
+                    <div class="amount-container form-item">
+                        <label>Amount</label>
+                        <div class="amount-wrap">
+                            <input id="amount" type="text" value="1"></input>
+                            <span class="amount-label">XRP</span>
+                        </div>
+                    </div>
+                    <input type="button" value="Submit" onclick="buttonClick()">
+
+                </form>
+
+                <input type="button" value="BTX" onclick="sendBTX()">
+
+
+            </div>
+            <div class="console-wrap">
+                <textarea cols="100" rows="25" id="console" readonly>Console...</textarea>
+            </div>
+
+
+        </section>
+
+
+    <section class="bottom">
+        <div class="user_info_container">
+            <!-- user_info -->
+            <div class="user_info">
+                <img class="user_icon  user_info_item" src="assets/images/usericon.png"></img>
+                <div id="user1_name" class="user_name  user_info_item">
+                </div>
+                <div class="user_tokens_wrap user_info_item">
+                    <img class="coin_icon" src="assets/images/xrpicon.png"></img>
+                    <span id="user1_tokens" class="user_tokens">
+                    </span>
+                    <strong>BTX</strong>                    
+                </div>
+                <a id="user1_link" class="user_link" taeget="_blank" href="#">XRPL transactions</a>
+            </div>
+
+            <!-- user_info -->
+            <div class="user_info">
+                <img class="user_icon  user_info_item" src="assets/images/usericon.png"></img>
+                <div id="user2_name" class="user_name  user_info_item">
+                </div>
+                <div class="user_tokens_wrap user_info_item">
+                    <img class="coin_icon" src="assets/images/xrpicon.png"></img>
+                    <span id="user2_tokens" class="user_tokens">
+                    </span>
+                    <strong>BTX</strong>                    
+                </div>
+                <a id="user2_link" class="user_link" taeget="_blank" href="#">XRPL transactions</a>
+            </div>
+
+            <!-- user_info -->
+            <div class="user_info">
+                <img class="user_icon  user_info_item" src="assets/images/usericon.png"></img>
+                <div id="user3_name" class="user_name  user_info_item">
+                </div>
+                <div class="user_tokens_wrap user_info_item">
+                    <img class="coin_icon" src="assets/images/xrpicon.png"></img>
+                    <span id="user3_tokens" class="user_tokens">
+                    </span>
+                    <strong>BTX</strong>                    
+                </div>
+                <a id="user3_link" class="user_link" taeget="_blank" href="#">XRPL transactions</a>
+            </div>
+        </div>
+    </section>
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/xrpl@2.0.0/build/xrpl-latest-min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</html>
+
